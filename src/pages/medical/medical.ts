@@ -28,6 +28,11 @@ export class MedicalPage implements OnInit{
 
       chart.geodata = am4geodata_worldLow;
       chart.projection = new am4maps.projections.Miller();
+      chart.homeZoomLevel = 15;
+      chart.homeGeoPoint = {
+        latitude: -9,
+        longitude: 33
+    };
 
 // Series for World map
 let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
@@ -52,80 +57,26 @@ let imageSeries = chart.series.push(new am4maps.MapImageSeries());
 imageSeries.mapImages.template.propertyFields.longitude = "longitude";
 imageSeries.mapImages.template.propertyFields.latitude = "latitude";
 imageSeries.data = [ {
-  "title": "Brussels",
-  "latitude": 50.8371,
-  "longitude": 4.3676
+  "title": "K's Quality Hospital",
+  "latitude": -8.909462,
+  "longitude": 33.45351
 }, {
-  "title": "Copenhagen",
-  "latitude": 55.6763,
-  "longitude": 12.5681
+  "title": "Mbeya Regional Hospital",
+  "latitude": -8.914820,
+  "longitude": 33.44643
 }, {
-  "title": "Paris",
-  "latitude": 48.8567,
-  "longitude": 2.3510
-}, {
-  "title": "Reykjavik",
-  "latitude": 64.1353,
-  "longitude": -21.8952
-}, {
-  "title": "Moscow",
-  "latitude": 55.7558,
-  "longitude": 37.6176
-}, {
-  "title": "Madrid",
-  "latitude": 40.4167,
-  "longitude": -3.7033
-}, {
-  "title": "London",
-  "latitude": 51.5002,
-  "longitude": -0.1262,
-  "url": "http://www.google.co.uk"
-}, {
-  "title": "Peking",
-  "latitude": 39.9056,
-  "longitude": 116.3958
-}, {
-  "title": "New Delhi",
-  "latitude": 28.6353,
-  "longitude": 77.2250
-}, {
-  "title": "Tokyo",
-  "latitude": 35.6785,
-  "longitude": 139.6823,
-  "url": "http://www.google.co.jp"
-}, {
-  "title": "Ankara",
-  "latitude": 39.9439,
-  "longitude": 32.8560
-}, {
-  "title": "Buenos Aires",
-  "latitude": -34.6118,
-  "longitude": -58.4173
-}, {
-  "title": "Brasilia",
-  "latitude": -15.7801,
-  "longitude": -47.9292
-}, {
-  "title": "Ottawa",
-  "latitude": 45.4235,
-  "longitude": -75.6979
-}, {
-  "title": "Washington",
-  "latitude": 38.8921,
-  "longitude": -77.0241
-}, {
-  "title": "Kinshasa",
-  "latitude": -4.3369,
-  "longitude": 15.3271
-}, {
-  "title": "Cairo",
-  "latitude": 30.0571,
-  "longitude": 31.2272
-}, {
-  "title": "Pretoria",
-  "latitude": -25.7463,
-  "longitude": 28.1876
-} ];
+  "title": "Hospitali Ya Wazazi Meta, +255 715 372 408",
+  "latitude": -8.909676,
+  "longitude": 33.43311
+},{
+  "title": "Igwalio City Hospital",
+  "latitude":-8.923458,
+  "longitude": 33.56932
+},{
+  "title":  "Isoko Hospital, +255 754 915 622",
+  "latitude": -9.480469,
+  "longitude": 33.49989
+}];
 
 // add events to recalculate map position when the map is moved or zoomed
 chart.events.on( "ready", updateCustomMarkers );
