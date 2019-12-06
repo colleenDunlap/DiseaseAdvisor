@@ -1,15 +1,15 @@
 webpackJsonp([1],{
 
-/***/ 340:
+/***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialPageModule", function() { return TutorialPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tutorial__ = __webpack_require__(761);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,39 +20,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabsPageModule = /** @class */ (function () {
-    function TabsPageModule() {
+var TutorialPageModule = /** @class */ (function () {
+    function TutorialPageModule() {
     }
-    TabsPageModule = __decorate([
+    TutorialPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */]),
-                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */]
+                __WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */]
             ]
         })
-    ], TabsPageModule);
-    return TabsPageModule;
+    ], TutorialPageModule);
+    return TutorialPageModule;
 }());
 
-//# sourceMappingURL=tabs.module.js.map
+//# sourceMappingURL=tutorial.module.js.map
 
 /***/ }),
 
-/***/ 354:
+/***/ 761:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3____ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,37 +64,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var TabsPage = /** @class */ (function () {
-    function TabsPage(navCtrl, translateService) {
-        var _this = this;
+var TutorialPage = /** @class */ (function () {
+    function TutorialPage(navCtrl, menu, translate, platform) {
         this.navCtrl = navCtrl;
-        this.translateService = translateService;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3____["c" /* Tab1Root */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_3____["d" /* Tab2Root */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_3____["e" /* Tab3Root */];
-        this.tab4Root = __WEBPACK_IMPORTED_MODULE_3____["f" /* Tab4Root */];
-        this.tab1Title = " ";
-        this.tab2Title = " ";
-        this.tab3Title = " ";
-        this.tab4Title = " ";
-        translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE', 'TAB4_TITLE']).subscribe(function (values) {
-            _this.tab1Title = values['TAB1_TITLE'];
-            _this.tab2Title = values['TAB2_TITLE'];
-            _this.tab3Title = values['TAB3_TITLE'];
-            _this.tab4Title = values['TAB4_TITLE'];
-        });
+        this.menu = menu;
+        this.platform = platform;
+        this.showSkip = true;
+        this.dir = 'ltr';
+        this.dir = platform.dir();
     }
-    TabsPage = __decorate([
+    TutorialPage.prototype.startApp = function () {
+        this.navCtrl.setRoot('OptionPage', {}, {
+            animate: true,
+            direction: 'forward'
+        });
+    };
+    TutorialPage.prototype.ionViewDidEnter = function () {
+        // the root left menu should be disabled on the tutorial page
+        //this.menu.enable(false);
+    };
+    TutorialPage.prototype.ionViewWillLeave = function () {
+        // enable the root left menu when leaving the tutorial page
+        //this.menu.enable(true);
+    };
+    TutorialPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="clipboard"></ion-tab>\n  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="medkit"></ion-tab>\n  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="clock"></ion-tab>\n  <ion-tab [root]="tab4Root" [tabTitle]="tab4Title" tabIcon="person"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\tabs\tabs.html"*/
+            selector: 'page-tutorial',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\tutorial\tutorial.html"*/'<ion-header no-shadow>\n  <ion-navbar>\n    <!--\n    <ion-buttons end *ngIf="showSkip">\n      <button ion-button (click)="startApp()" color="primary">{{ \'TUTORIAL_SKIP_BUTTON\' | translate}}</button>\n    </ion-buttons>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content id=welcome no-bounce>\n      <img src="assets/img/DAlogo.png" class="slide-image" />\n      <br>\n      <button ion-button icon-end large clear (click)="startApp()">\n        Explore The Site\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\tutorial\tutorial.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]])
-    ], TabsPage);
-    return TabsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */]])
+    ], TutorialPage);
+    return TutorialPage;
 }());
 
-//# sourceMappingURL=tabs.js.map
+//# sourceMappingURL=tutorial.js.map
 
 /***/ })
 

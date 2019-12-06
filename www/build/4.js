@@ -1,15 +1,15 @@
 webpackJsonp([4],{
 
-/***/ 337:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsPageModule", function() { return SettingsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profile__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings__ = __webpack_require__(758);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,35 +20,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ProfilePageModule = /** @class */ (function () {
-    function ProfilePageModule() {
+var SettingsPageModule = /** @class */ (function () {
+    function SettingsPageModule() {
     }
-    ProfilePageModule = __decorate([
+    SettingsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* SettingsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__profile__["a" /* ProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__settings__["a" /* SettingsPage */]),
                 __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_3__profile__["a" /* ProfilePage */]
+                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* SettingsPage */]
             ]
         })
-    ], ProfilePageModule);
-    return ProfilePageModule;
+    ], SettingsPageModule);
+    return SettingsPageModule;
 }());
 
-//# sourceMappingURL=profile.module.js.map
+//# sourceMappingURL=settings.module.js.map
 
 /***/ }),
 
-/***/ 351:
+/***/ 758:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(117);
@@ -73,8 +73,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * to enable the user to customize settings for the app.
  *
  */
-var ProfilePage = /** @class */ (function () {
-    function ProfilePage(navCtrl, settings, formBuilder, navParams, translate) {
+var SettingsPage = /** @class */ (function () {
+    function SettingsPage(navCtrl, settings, formBuilder, navParams, translate) {
         this.navCtrl = navCtrl;
         this.settings = settings;
         this.formBuilder = formBuilder;
@@ -87,10 +87,10 @@ var ProfilePage = /** @class */ (function () {
         };
         this.page = 'main';
         this.pageTitleKey = 'SETTINGS_TITLE';
-        this.subSettings = ProfilePage_1;
+        this.subSettings = SettingsPage_1;
     }
-    ProfilePage_1 = ProfilePage;
-    ProfilePage.prototype._buildForm = function () {
+    SettingsPage_1 = SettingsPage;
+    SettingsPage.prototype._buildForm = function () {
         var _this = this;
         var group = {
             option1: [this.options.option1],
@@ -112,11 +112,11 @@ var ProfilePage = /** @class */ (function () {
             _this.settings.merge(_this.form.value);
         });
     };
-    ProfilePage.prototype.ionViewDidLoad = function () {
+    SettingsPage.prototype.ionViewDidLoad = function () {
         // Build an empty form for the template to render
         this.form = this.formBuilder.group({});
     };
-    ProfilePage.prototype.ionViewWillEnter = function () {
+    SettingsPage.prototype.ionViewWillEnter = function () {
         var _this = this;
         // Build an empty form for the template to render
         this.form = this.formBuilder.group({});
@@ -131,24 +131,24 @@ var ProfilePage = /** @class */ (function () {
             _this._buildForm();
         });
     };
-    ProfilePage.prototype.ngOnChanges = function () {
+    SettingsPage.prototype.ngOnChanges = function () {
         console.log('Ng All Changes');
     };
-    ProfilePage = ProfilePage_1 = __decorate([
+    SettingsPage = SettingsPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\profile\profile.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Profile</ion-title>\n    <!--<ion-title>{{ pageTitle }}</ion-title>-->\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <form [formGroup]="form" *ngIf="settingsReady">\n    <ion-list *ngIf="page == \'main\'">\n      <ion-item>\n        <ion-label>{{ \'SETTINGS_OPTION1\' | translate }}</ion-label>\n        <ion-toggle formControlName="option1"></ion-toggle>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>{{ \'SETTINGS_OPTION2\' | translate }}</ion-label>\n        <ion-input formControlName="option2"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>{{ \'SETTINGS_OPTION3\' | translate }}</ion-label>\n        <ion-select formControlName="option3">\n          <ion-option value="1" checked="true">1</ion-option>\n          <ion-option value="2">2</ion-option>\n          <ion-option value="3">3</ion-option>\n        </ion-select>\n      </ion-item>\n\n      <button ion-item [navPush]="subSettings" [navParams]="profileSettings">\n        {{ \'SETTINGS_PROFILE_BUTTON\' | translate }}\n      </button>\n    </ion-list>\n\n    <ion-list *ngIf="page == \'profile\'">\n      <ion-item>\n        <ion-label>{{ \'SETTINGS_OPTION4\' | translate }}</ion-label>\n        <ion-input formControlName="option4"></ion-input>\n      </ion-item>\n    </ion-list>\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\profile\profile.html"*/
+            selector: 'page-settings',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\settings\settings.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Prevention</ion-title>\n    <!--<ion-title>{{ pageTitle }}</ion-title>-->\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\settings\settings.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* Settings */],
             __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
-    ], ProfilePage);
-    return ProfilePage;
-    var ProfilePage_1;
+    ], SettingsPage);
+    return SettingsPage;
+    var SettingsPage_1;
 }());
 
-//# sourceMappingURL=profile.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ })
 

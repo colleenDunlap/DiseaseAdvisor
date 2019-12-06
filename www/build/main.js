@@ -67,35 +67,35 @@ var map = {
 	],
 	"../pages/medical/medical.module": [
 		334,
-		7
+		0
 	],
 	"../pages/menu/menu.module": [
 		335,
-		6
+		7
 	],
 	"../pages/option/option.module": [
 		336,
-		5
+		6
 	],
 	"../pages/profile/profile.module": [
 		337,
-		4
+		5
 	],
 	"../pages/settings/settings.module": [
 		338,
-		3
+		4
 	],
 	"../pages/signup/signup.module": [
 		339,
-		2
+		3
 	],
 	"../pages/tabs/tabs.module": [
 		340,
-		1
+		2
 	],
 	"../pages/tutorial/tutorial.module": [
 		341,
-		0
+		1
 	]
 };
 function webpackAsyncContext(req) {

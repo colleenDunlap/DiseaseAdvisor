@@ -1,15 +1,15 @@
 webpackJsonp([6],{
 
-/***/ 335:
+/***/ 336:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OptionPageModule", function() { return OptionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__option__ = __webpack_require__(756);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,35 +20,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MenuPageModule = /** @class */ (function () {
-    function MenuPageModule() {
+var OptionPageModule = /** @class */ (function () {
+    function OptionPageModule() {
     }
-    MenuPageModule = __decorate([
+    OptionPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */],
+                __WEBPACK_IMPORTED_MODULE_3__option__["a" /* OptionPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__option__["a" /* OptionPage */]),
                 __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */]
+                __WEBPACK_IMPORTED_MODULE_3__option__["a" /* OptionPage */]
             ]
         })
-    ], MenuPageModule);
-    return MenuPageModule;
+    ], OptionPageModule);
+    return OptionPageModule;
 }());
 
-//# sourceMappingURL=menu.module.js.map
+//# sourceMappingURL=option.module.js.map
 
 /***/ }),
 
-/***/ 349:
+/***/ 756:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OptionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(116);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -62,38 +62,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var MenuPage = /** @class */ (function () {
-    function MenuPage(navCtrl) {
+/**
+ * The Welcome Page is a splash page that quickly describes the app,
+ * and then directs the user to create an account or log in.
+ * If you'd like to immediately put the user onto a login/signup page,
+ * we recommend not using the Welcome page.
+*/
+var OptionPage = /** @class */ (function () {
+    function OptionPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.rootPage = 'ContentPage';
-        // used for an example of ngFor and navigation
-        this.pages = [
-            { title: 'Sign in', component: 'LoginPage' },
-            { title: 'Signup', component: 'SignupPage' }
-        ];
     }
-    MenuPage.prototype.ionViewDidLoad = function () {
-        console.log('Hello MenuPage Page');
+    OptionPage.prototype.login = function () {
+        this.navCtrl.push('LoginPage');
     };
-    MenuPage.prototype.openPage = function (page) {
-        // Reset the content nav to have just this page
-        // we wouldn't want the back button to show in this scenario
-        this.nav.setRoot(page.component);
+    OptionPage.prototype.signup = function () {
+        this.navCtrl.push('SignupPage');
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
-    ], MenuPage.prototype, "nav", void 0);
-    MenuPage = __decorate([
+    OptionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-menu',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\menu\menu.html"*/'<ion-menu [content]="content" type="overlay">\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav #content [root]="rootPage"></ion-nav>'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\menu\menu.html"*/
+            selector: 'page-option',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\option\option.html"*/'<ion-content scroll="false">\n  <div class="splash-bg"></div>\n  <div class="splash-info">\n    <div class="splash-logo"></div>\n    <div class="splash-intro">\n      Your trusted source for disease prevention!\n    </div>\n  </div>\n  <div padding>\n    <button ion-button block (click)="signup()">{{ \'SIGNUP\' | translate }}</button>\n    <button ion-button block (click)="login()" class="login">{{ \'LOGIN\' | translate }}</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\option\option.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
-    ], MenuPage);
-    return MenuPage;
+    ], OptionPage);
+    return OptionPage;
 }());
 
-//# sourceMappingURL=menu.js.map
+//# sourceMappingURL=option.js.map
 
 /***/ })
 
