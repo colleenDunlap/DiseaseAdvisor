@@ -25879,6 +25879,10 @@ page-option button.login.activated {
   background-color: gainsboro;
 }
 
+#terms {
+  margin: auto;
+}
+
 page-tutorial .toolbar-background {
   background: transparent;
   border-color: transparent;

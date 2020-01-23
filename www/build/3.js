@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 340:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup__ = __webpack_require__(758);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var SignupPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 760:
+/***/ 758:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81,6 +81,7 @@ var SignupPage = /** @class */ (function () {
         this.account = {
             name: 'Test Human',
             email: 'test@example.com',
+            phone: '1 234-567-890',
             password: 'test'
         };
         this.translateService.get('SIGNUP_ERROR').subscribe(function (value) {
@@ -89,6 +90,7 @@ var SignupPage = /** @class */ (function () {
     }
     SignupPage.prototype.doSignup = function () {
         var _this = this;
+        console.log(this.account.name);
         // Attempt to login in through our User service
         this.user.signup(this.account).subscribe(function (resp) {
             _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4____["b" /* MainPage */]);
@@ -105,14 +107,12 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{ \'SIGNUP_TITLE\' | translate }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <form (submit)="doSignup()">\n    <ion-list>\n\n      <ion-item>\n        <ion-label fixed>{{ \'NAME\' | translate }}</ion-label>\n        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label fixed>{{ \'EMAIL\' | translate }}</ion-label>\n        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>\n      </ion-item>\n\n      <!--\n      Want to add a Username? Here you go:\n\n      <ion-item>\n        <ion-label floating>Username</ion-label>\n        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>\n      </ion-item>\n      -->\n\n      <ion-item>\n        <ion-label fixed>{{ \'PASSWORD\' | translate }}</ion-label>\n        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>\n      </ion-item>\n\n      <div padding>\n        <button ion-button color="primary" block>{{ \'SIGNUP_BUTTON\' | translate }}</button>\n      </div>\n\n    </ion-list>\n  </form>\n</ion-content>'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\signup\signup.html"*/
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\signup\signup.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>{{ \'SIGNUP_TITLE\' | translate }}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n\n\n\n\n\n\n  <form (submit)="doSignup()">\n\n    <ion-list>\n\n\n\n      <ion-item>\n\n        <ion-label fixed>{{ \'NAME\' | translate }}</ion-label>\n\n        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label fixed>{{ \'EMAIL\' | translate }}</ion-label>\n\n        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label fixed>Phone</ion-label>\n\n        <ion-input type="tel" [(ngModel)]="account.phone" name="phone"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label fixed>{{ \'PASSWORD\' | translate }}</ion-label>\n\n        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>\n\n      </ion-item>\n\n\n\n      <p id="terms">By signing up you are agreeing to our <a href="#" target="_blank">terms and conditions</a>.</p>\n\n      <!--create new page to display the terms.  will open in new tab-->\n\n\n\n      <div padding>\n\n        <button ion-button color="primary" block>{{ \'SIGNUP_BUTTON\' | translate }}</button>\n\n      </div>\n\n\n\n    </ion-list>\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\signup\signup.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers__["d" /* User */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__providers__["d" /* User */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers__["d" /* User */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]) === "function" && _d || Object])
     ], SignupPage);
     return SignupPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=signup.js.map

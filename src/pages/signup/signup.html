@@ -8,6 +8,9 @@
 
 
 <ion-content>
+
+
+
   <form (submit)="doSignup()">
     <ion-list>
 
@@ -21,19 +24,18 @@
         <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
 
-      <!--
-      Want to add a Username? Here you go:
-
       <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+        <ion-label fixed>Phone</ion-label>
+        <ion-input type="tel" [(ngModel)]="account.phone" name="phone"></ion-input>
       </ion-item>
-      -->
 
       <ion-item>
         <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
+
+      <p id="terms">By signing up you are agreeing to our <a href="#" target="_blank">terms and conditions</a>.</p>
+      <!--create new page to display the terms.  will open in new tab-->
 
       <div padding>
         <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>

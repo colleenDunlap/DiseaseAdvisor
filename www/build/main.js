@@ -50,51 +50,51 @@ var map = {
 		12
 	],
 	"../pages/item-create/item-create.module": [
-		331,
+		330,
 		11
 	],
 	"../pages/item-detail/item-detail.module": [
-		334,
+		331,
 		10
 	],
 	"../pages/list-master/list-master.module": [
-		335,
+		332,
 		9
 	],
 	"../pages/login/login.module": [
-		330,
+		333,
 		8
 	],
 	"../pages/medical/medical.module": [
-		332,
+		336,
 		0
 	],
 	"../pages/menu/menu.module": [
-		333,
+		340,
 		7
 	],
 	"../pages/option/option.module": [
-		341,
+		334,
 		6
 	],
 	"../pages/profile/profile.module": [
-		336,
+		335,
 		5
 	],
 	"../pages/settings/settings.module": [
-		339,
+		337,
 		4
 	],
 	"../pages/signup/signup.module": [
-		340,
+		338,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		337,
+		339,
 		2
 	],
 	"../pages/tutorial/tutorial.module": [
-		338,
+		341,
 		1
 	]
 };
@@ -403,18 +403,18 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/medical/medical.module#MedicalPageModule', name: 'MedicalPage', segment: 'medical', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/option/option.module#OptionPageModule', name: 'OptionPage', segment: 'option', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/medical/medical.module#MedicalPageModule', name: 'MedicalPage', segment: 'medical', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/option/option.module#OptionPageModule', name: 'OptionPage', segment: 'option', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot()
