@@ -1,4 +1,4 @@
-webpackJsonp([14],{
+webpackJsonp([13],{
 
 /***/ 118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -43,27 +43,27 @@ webpackEmptyAsyncContext.id = 130;
 var map = {
 	"../pages/cards/cards.module": [
 		328,
-		13
+		12
 	],
 	"../pages/content/content.module": [
 		329,
-		12
+		11
 	],
 	"../pages/item-create/item-create.module": [
 		330,
-		11
+		10
 	],
 	"../pages/item-detail/item-detail.module": [
 		331,
-		10
+		9
 	],
 	"../pages/list-master/list-master.module": [
 		332,
-		9
+		8
 	],
 	"../pages/login/login.module": [
 		333,
-		8
+		7
 	],
 	"../pages/medical/medical.module": [
 		334,
@@ -71,18 +71,14 @@ var map = {
 	],
 	"../pages/menu/menu.module": [
 		335,
-		7
+		6
 	],
 	"../pages/option/option.module": [
 		336,
-		6
+		5
 	],
 	"../pages/profile/profile.module": [
 		337,
-		5
-	],
-	"../pages/settings/settings.module": [
-		338,
 		4
 	],
 	"../pages/signup/signup.module": [
@@ -90,11 +86,11 @@ var map = {
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		340,
+		338,
 		2
 	],
-	"../pages/tutorial/tutorial.module": [
-		341,
+	"../pages/welcome/welcome.module": [
+		340,
 		1
 	]
 };
@@ -294,17 +290,15 @@ var Items = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Tab1Root; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Tab2Root; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Tab3Root; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return Tab4Root; });
 // The page the user lands on after opening the app and without a session
-var FirstRunPage = 'TutorialPage';
+var FirstRunPage = 'WelcomePage';
 // The main page the user will see as they use the app over a long period of time.
 // Change this if not using tabs
 var MainPage = 'TabsPage';
 // The initial root pages for our tabs (remove if not using tabs)
 var Tab1Root = 'ListMasterPage';
 var Tab2Root = 'MedicalPage';
-var Tab3Root = 'SettingsPage';
-var Tab4Root = 'ProfilePage';
+var Tab3Root = 'ProfilePage';
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -411,10 +405,9 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/option/option.module#OptionPageModule', name: 'OptionPage', segment: 'option', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -701,7 +694,6 @@ var MyApp = /** @class */ (function () {
         this.splashScreen = splashScreen;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages__["a" /* FirstRunPage */];
         this.pages = [
-            { title: 'Tutorial', component: 'TutorialPage' },
             { title: 'Welcome', component: 'WelcomePage' },
             { title: 'Tabs', component: 'TabsPage' },
             { title: 'Cards', component: 'CardsPage' },
@@ -710,8 +702,7 @@ var MyApp = /** @class */ (function () {
             { title: 'Signup', component: 'SignupPage' },
             { title: 'Master Detail', component: 'ListMasterPage' },
             { title: 'Menu', component: 'MenuPage' },
-            { title: 'Settings', component: 'SettingsPage' },
-            { title: 'Search', component: 'SearchPage' }
+            { title: 'Medical', component: 'MedicalPage' }
         ];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.

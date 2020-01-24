@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 341:
+/***/ 340:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialPageModule", function() { return TutorialPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WelcomePageModule", function() { return WelcomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tutorial__ = __webpack_require__(761);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__welcome__ = __webpack_require__(759);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20,35 +20,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TutorialPageModule = /** @class */ (function () {
-    function TutorialPageModule() {
+var WelcomePageModule = /** @class */ (function () {
+    function WelcomePageModule() {
     }
-    TutorialPageModule = __decorate([
+    WelcomePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */],
+                __WEBPACK_IMPORTED_MODULE_2__welcome__["a" /* WelcomePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__welcome__["a" /* WelcomePage */]),
                 __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */]
+                __WEBPACK_IMPORTED_MODULE_2__welcome__["a" /* WelcomePage */]
             ]
         })
-    ], TutorialPageModule);
-    return TutorialPageModule;
+    ], WelcomePageModule);
+    return WelcomePageModule;
 }());
 
-//# sourceMappingURL=tutorial.module.js.map
+//# sourceMappingURL=welcome.module.js.map
 
 /***/ }),
 
-/***/ 761:
+/***/ 759:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(117);
@@ -64,8 +64,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var TutorialPage = /** @class */ (function () {
-    function TutorialPage(navCtrl, menu, translate, platform) {
+var WelcomePage = /** @class */ (function () {
+    function WelcomePage(navCtrl, menu, translate, platform) {
         this.navCtrl = navCtrl;
         this.menu = menu;
         this.platform = platform;
@@ -73,30 +73,30 @@ var TutorialPage = /** @class */ (function () {
         this.dir = 'ltr';
         this.dir = platform.dir();
     }
-    TutorialPage.prototype.startApp = function () {
+    WelcomePage.prototype.startApp = function () {
         this.navCtrl.setRoot('OptionPage', {}, {
             animate: true,
             direction: 'forward'
         });
     };
-    TutorialPage.prototype.ionViewDidEnter = function () {
+    WelcomePage.prototype.ionViewDidEnter = function () {
         // the root left menu should be disabled on the tutorial page
         //this.menu.enable(false);
     };
-    TutorialPage.prototype.ionViewWillLeave = function () {
+    WelcomePage.prototype.ionViewWillLeave = function () {
         // enable the root left menu when leaving the tutorial page
         //this.menu.enable(true);
     };
-    TutorialPage = __decorate([
+    WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tutorial',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\tutorial\tutorial.html"*/'<ion-header no-shadow>\n  <ion-navbar>\n    <!--\n    <ion-buttons end *ngIf="showSkip">\n      <button ion-button (click)="startApp()" color="primary">{{ \'TUTORIAL_SKIP_BUTTON\' | translate}}</button>\n    </ion-buttons>-->\n  </ion-navbar>\n</ion-header>\n\n<ion-content id=welcome no-bounce>\n      <img src="/assets/img/DAlogo.PNG" class="slide-image" />\n      <br>\n      <button ion-button icon-end large clear (click)="startApp()">\n        Explore The Site\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\tutorial\tutorial.html"*/
+            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\welcome\welcome.html"*/'<ion-header no-shadow>\n\n  <ion-navbar>\n\n    <!--\n\n    <ion-buttons end *ngIf="showSkip">\n\n      <button ion-button (click)="startApp()" color="primary">{{ \'TUTORIAL_SKIP_BUTTON\' | translate}}</button>\n\n    </ion-buttons>-->\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content id=welcome no-bounce>\n\n      <img src="/assets/img/DAlogo.PNG" class="slide-image" />\n\n      <br>\n\n      <button ion-button icon-end large clear (click)="startApp()">\n\n        Explore The Site\n\n        <ion-icon name="arrow-forward"></ion-icon>\n\n      </button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\welcome\welcome.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */]])
-    ], TutorialPage);
-    return TutorialPage;
+    ], WelcomePage);
+    return WelcomePage;
 }());
 
-//# sourceMappingURL=tutorial.js.map
+//# sourceMappingURL=welcome.js.map
 
 /***/ })
 

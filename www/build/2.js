@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 340:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs__ = __webpack_require__(757);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var TabsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 760:
+/***/ 757:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,21 +74,18 @@ var TabsPage = /** @class */ (function () {
         this.tab1Root = __WEBPACK_IMPORTED_MODULE_3____["c" /* Tab1Root */];
         this.tab2Root = __WEBPACK_IMPORTED_MODULE_3____["d" /* Tab2Root */];
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_3____["e" /* Tab3Root */];
-        this.tab4Root = __WEBPACK_IMPORTED_MODULE_3____["f" /* Tab4Root */];
         this.tab1Title = " ";
         this.tab2Title = " ";
         this.tab3Title = " ";
-        this.tab4Title = " ";
-        translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE', 'TAB4_TITLE']).subscribe(function (values) {
+        translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE']).subscribe(function (values) {
             _this.tab1Title = values['TAB1_TITLE'];
             _this.tab2Title = values['TAB2_TITLE'];
             _this.tab3Title = values['TAB3_TITLE'];
-            _this.tab4Title = values['TAB4_TITLE'];
         });
     }
     TabsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="clipboard"></ion-tab>\n  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="medkit"></ion-tab>\n  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="clock"></ion-tab>\n  <ion-tab [root]="tab4Root" [tabTitle]="tab4Title" tabIcon="person"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\Colleen Duhlap\Desktop\ionic project\src\pages\tabs\tabs.html"*/
+            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="clipboard"></ion-tab>\n\n  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="medkit"></ion-tab>\n\n  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="person"></ion-tab>\n\n\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]])
     ], TabsPage);

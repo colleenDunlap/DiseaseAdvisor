@@ -25883,17 +25883,17 @@ page-option button.login.activated {
   margin: auto;
 }
 
-page-tutorial .toolbar-background {
+page-welcome .toolbar-background {
   background: transparent;
   border-color: transparent;
 }
 
-page-tutorial b {
+page-welcome b {
   font-weight: 500;
   margin: auto;
 }
 
-page-tutorial p {
+page-welcome p {
   padding: 0 40px;
   font-size: 14px;
   line-height: 1.5;
@@ -25901,11 +25901,11 @@ page-tutorial p {
   color: #60646B;
 }
 
-page-tutorial p b {
+page-welcome p b {
   color: #000000;
   margin: auto;
 }
 
-page-tutorial #welcome {
+page-welcome #welcome {
   margin-left: 40%;
 }
