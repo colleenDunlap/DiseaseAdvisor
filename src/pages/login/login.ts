@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
+//import { FirebaseAuthentication } from '@ionic-native/firebase-authentication/ngx';
 
+import * as firebase from '@firebase/app';
 import { User } from '../../providers';
 import { MainPage } from '../';
 
@@ -25,8 +27,8 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
     public user: User,
     public toastCtrl: ToastController,
-    public translateService: TranslateService) {
-
+    //public translateService: TranslateService, private firebaseAuthentication: FirebaseAuthentication) {
+      public translateService: TranslateService){
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
     })
@@ -34,10 +36,12 @@ export class LoginPage {
 
   // Attempt to login in through our User service
   doLogin() {
+    console.log(this.account.email)
+    /*
     this.user.login(this.account).subscribe((resp) => {
       this.navCtrl.push(MainPage);
     }, (err) => {
-      this.navCtrl.push(MainPage);
+      //this.navCtrl.push(MainPage);
       // Unable to log in
       let toast = this.toastCtrl.create({
         message: this.loginErrorString,
@@ -46,5 +50,25 @@ export class LoginPage {
       });
       toast.present();
     });
+    */
+   /*
+   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(() => {
+    return firebase.auth().signInWithEmailAndPassword(this.account.email, this.account.password)
+      .then((user) => {
+        $('#myModal').modal('toggle');
+        this.user = user.user;
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  });
+  */
+ /*
+ this.firebaseAuthentication.signInWithEmailAndPassword(this.account.email, this.account.password)
+  .then((res: any) => console.log(res))
+  .catch((error: any) => console.error(error));
+  */
+  console.log('latest version')
+   
   }
 }
