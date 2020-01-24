@@ -52,4 +52,12 @@ export class SignupPage {
       toast.present();
     });
   }
+
+  //function to call when user clicks on terms
+  openTerms(){
+    this.navCtrl.setRoot('ContentPage', {}, {
+      animate: true,
+      direction: 'forward'
+    });
+  }
 }

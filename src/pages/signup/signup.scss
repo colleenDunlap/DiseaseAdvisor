@@ -1,6 +1,19 @@
 page-signup {
 
 }
-#terms{
+#notice{
+    text-transform: uppercase;
+    width:600px;
     margin:auto;
+    vertical-align: middle;
 }
+
+#terms{
+    color:red;
+}
+#terms:hover{
+    cursor: pointer;
+    border:solid 1px;
+    border-radius: .25em;
+}
+

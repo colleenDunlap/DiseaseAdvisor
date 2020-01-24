@@ -34,13 +34,17 @@
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
 
-      <p id="terms">By signing up you are agreeing to our <a href="#" target="_blank">terms and conditions</a>.</p>
-      <!--create new page to display the terms.  will open in new tab-->
-
       <div padding>
         <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
       </div>
 
     </ion-list>
   </form>
+
+  <h6 id="notice">By signing up you, are agreeing to our
+    <span id="terms" (click)="openTerms()">
+    terms and conditions.
+    </span>
+  </h6>
+
 </ion-content>

@@ -25696,6 +25696,10 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+ion-item p {
+  width: 90%;
+}
+
 page-item-create .profile-image-wrapper {
   text-align: center;
   margin: 20px 0;
@@ -25879,8 +25883,21 @@ page-option button.login.activated {
   background-color: gainsboro;
 }
 
-#terms {
+#notice {
+  text-transform: uppercase;
+  width: 600px;
   margin: auto;
+  vertical-align: middle;
+}
+
+#terms {
+  color: red;
+}
+
+#terms:hover {
+  cursor: pointer;
+  border: solid 1px;
+  border-radius: .25em;
 }
 
 page-welcome .toolbar-background {
