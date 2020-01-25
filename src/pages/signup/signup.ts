@@ -55,7 +55,7 @@ export class SignupPage {
 
   //function to call when user clicks on terms
   openTerms(){
-    this.navCtrl.setRoot('ContentPage', {}, {
+    this.navCtrl.setRoot('TermsPage', {}, {
       animate: true,
       direction: 'forward'
     });
