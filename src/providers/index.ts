@@ -1,5 +1,5 @@
 export { Api } from './api/api';
-export { Items } from '../mocks/providers/items';
+export { Diseases } from '../mocks/providers/diseases';
 export { MedCenters } from '../mocks/providers/medCenters';
 export { Settings } from './settings/settings';
 export { User } from './user/user';

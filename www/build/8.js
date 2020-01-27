@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 333:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_master__ = __webpack_require__(551);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_master__ = __webpack_require__(552);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var ListMasterPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 551:
+/***/ 552:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65,11 +65,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ListMasterPage = /** @class */ (function () {
-    function ListMasterPage(navCtrl, items, modalCtrl) {
+    function ListMasterPage(navCtrl, diseases, modalCtrl) {
         this.navCtrl = navCtrl;
-        this.items = items;
+        this.diseases = diseases;
         this.modalCtrl = modalCtrl;
-        this.currentItems = this.items.query();
+        this.currentDiseases = this.diseases.query();
     }
     /**
      * The view loaded, let's query our items for the list
@@ -77,38 +77,31 @@ var ListMasterPage = /** @class */ (function () {
     ListMasterPage.prototype.ionViewDidLoad = function () {
     };
     /**
-     * Prompt the user to add a new item. This shows our ItemCreatePage in a
-     * modal and then adds the new item to our data source if the user created one.
-     */
-    ListMasterPage.prototype.addItem = function () {
-        var _this = this;
-        var addModal = this.modalCtrl.create('ItemCreatePage');
-        addModal.onDidDismiss(function (item) {
-            if (item) {
-                _this.items.add(item);
-            }
-        });
-        addModal.present();
-    };
-    /**
-     * Delete an item from the list of items.
-     */
-    ListMasterPage.prototype.deleteItem = function (item) {
-        this.items.delete(item);
-    };
+     
+    addDisease() {
+      let addModal = this.modalCtrl.create('ItemCreatePage');
+      addModal.onDidDismiss(disease => {
+        if (disease) {
+          this.diseases.add(disease);
+        }
+      })
+      addModal.present();
+    }
+    
+    */
     /**
      * Navigate to the detail page for this item.
      */
-    ListMasterPage.prototype.openItem = function (item) {
-        this.navCtrl.push('ItemDetailPage', {
-            item: item
+    ListMasterPage.prototype.openDisease = function (disease) {
+        this.navCtrl.push('DiseaseDetailPage', {
+            disease: disease
         });
     };
     ListMasterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list-master',template:/*ion-inline-start:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\list-master\list-master.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>{{ \'LIST_MASTER_TITLE\' | translate }}</ion-title>\n\n\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="addItem()">\n\n        <ion-icon name="add"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content>\n\n\n\n  <ion-list>\n\n    <ion-item-sliding *ngFor="let item of currentItems">\n\n      <button ion-item (click)="openItem(item)">\n\n        <ion-avatar item-start>\n\n          <img [src]="item.profilePic" />\n\n        </ion-avatar>\n\n        <h2>{{item.name}}</h2>\n\n        <p>{{item.about}}</p>\n\n        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>\n\n      </button>\n\n\n\n      <ion-item-options>\n\n        <button ion-button color="danger" (click)="deleteItem(item)">\n\n          {{ \'DELETE_BUTTON\' | translate }}\n\n        </button>\n\n      </ion-item-options>\n\n    </ion-item-sliding>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\list-master\list-master.html"*/
+            selector: 'page-list-master',template:/*ion-inline-start:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\list-master\list-master.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>{{ \'LIST_MASTER_TITLE\' | translate }}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content>\n\n\n\n  <ion-list>\n\n    <ion-item *ngFor="let disease of currentDiseases">\n\n      <button ion-item (click)="openDisease(disease)">\n\n        <h2>{{disease.name}}</h2>\n\n        <p>{{disease.about}}</p>\n\n        <ion-note item-end *ngIf="disease.note">{{disease.note}}</ion-note> <!--We can store outbreak info in the notes-->\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Paula\Documents\Senior Design\app repo\DiseaseAdvisor\src\pages\list-master\list-master.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers__["b" /* Items */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers__["b" /* Diseases */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]])
     ], ListMasterPage);
     return ListMasterPage;
 }());
