@@ -4,7 +4,7 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 //import { FirebaseAuthentication } from '@ionic-native/firebase-authentication/ngx';
 import * as firebase from '@firebase/app';
 import { User } from '../../providers';
-import { MainPage } from '../';
+import { WelcomePage } from '../';
 
 @IonicPage()
 @Component({

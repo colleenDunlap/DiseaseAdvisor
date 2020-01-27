@@ -10,6 +10,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { Diseases } from '../mocks/providers/diseases';
+import { Countries } from '../mocks/providers/countries';
 import { MedCenters } from '../mocks/providers/medCenters';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
@@ -59,6 +60,7 @@ export function provideSettings(storage: Storage) {
   providers: [
     Api,
     Diseases,
+    Countries,
     MedCenters,
     User,
     Camera,
