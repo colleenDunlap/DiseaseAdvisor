@@ -8,8 +8,11 @@ export class Diseases {
 
   defaultDisease: any = {
     "name": "Malaria",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "malaria is a disease.",
+    "profilePic": "assets/img/map.PNG",
+    "causes": "common causes",
+    "Preventions" : "how to prevent",
+    "Vaccines" : "recommended vaccines",
+    "symptoms": "Common Symptoms" 
   };
 
 
@@ -18,42 +21,66 @@ export class Diseases {
       {
         "name": "Disease Name",
         "profilePic": "assets/img/mosquito.jpg",
-        "about": "Common Symptoms"
+        "causes": "common causes",
+        "Preventions" : "how to prevent",
+        "Vaccines" : "recommended vaccines",
+        "symptoms": "Common Symptoms"   
       },
       {
         "name": "Disease Name",
         "profilePic": "assets/img/mosquito.jpg",
-        "about": "Common Symptoms"
+         "causes": "common causes",
+        "Preventions" : "how to prevent",
+        "Vaccines" : "recommended vaccines",
+        "symptoms": "Common Symptoms"   
       },
       {
         "name": "Disease Name",
         "profilePic": "assets/img/mosquito.jpg",
-        "about": "Common Symptoms"
+        "causes": "common causes",
+        "Preventions" : "how to prevent",
+        "Vaccines" : "recommended vaccines",
+        "symptoms": "Common Symptoms"   
       },
       {
         "name": "Disease Name",
         "profilePic": "assets/img/mosquito.jpg",
-        "about": "Common Symptoms"
+         "causes": "common causes",
+        "Preventions" : "how to prevent",
+        "Vaccines" : "recommended vaccines",
+        "symptoms": "Common Symptoms"   
       },
       {
         "name": "Disease Name",
         "profilePic": "assets/img/mosquito.jpg",
-        "about": "Common Symptoms"
+         "causes": "common causes",
+        "Preventions" : "how to prevent",
+        "Vaccines" : "recommended vaccines",
+        "symptoms": "Common Symptoms"   
       },
       {
         "name": "Disease Name",
         "profilePic": "assets/img/mosquito.jpg",
-        "about": "Common Symptoms"
+         "causes": "common causes",
+        "Preventions" : "how to prevent",
+        "Vaccines" : "recommended vaccines",
+        "symptoms": "Common Symptoms"   
       },
       {
         "name": "Disease Name",
         "profilePic": "assets/img/mosquito.jpg",
-        "about": "Common Symptoms"
+         "causes": "common causes",
+        "Preventions" : "how to prevent",
+        "Vaccines" : "recommended vaccines",
+        "symptoms": "Common Symptoms"   
       },
       {
         "name": "Disease Name",
         "profilePic": "assets/img/mosquito.jpg",
-        "about": "Common Symptoms"
+         "causes": "common causes",
+        "Preventions" : "how to prevent",
+        "Vaccines" : "recommended vaccines",
+        "symptoms": "Common Symptoms"   
       }
     ];
 

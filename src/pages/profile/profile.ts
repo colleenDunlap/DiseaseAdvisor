@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Settings } from '../../providers';
+import { WelcomePage } from '../welcome/welcome';
 
 /**
  * The Settings page is a simple form that syncs with a Settings provider
@@ -92,4 +93,9 @@ export class ProfilePage {
   ngOnChanges() {
     console.log('Ng All Changes');
   }
+
+  exitCountry(){
+    this.navCtrl.push(WelcomePage);
+  }
+  
 }

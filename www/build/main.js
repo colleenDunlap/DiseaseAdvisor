@@ -61,11 +61,11 @@ var map = {
 	],
 	"../pages/list-master/list-master.module": [
 		335,
-		8
+		2
 	],
 	"../pages/login/login.module": [
 		336,
-		7
+		8
 	],
 	"../pages/medical/medical.module": [
 		337,
@@ -73,27 +73,27 @@ var map = {
 	],
 	"../pages/menu/menu.module": [
 		338,
-		6
+		7
 	],
 	"../pages/option/option.module": [
 		339,
-		5
+		6
 	],
 	"../pages/profile/profile.module": [
 		340,
-		4
+		1
 	],
 	"../pages/signup/signup.module": [
 		341,
-		3
+		5
 	],
 	"../pages/tabs/tabs.module": [
 		342,
-		2
+		4
 	],
 	"../pages/welcome/welcome.module": [
 		343,
-		1
+		3
 	]
 };
 function webpackAsyncContext(req) {
@@ -199,7 +199,7 @@ var Diseases = /** @class */ (function () {
         this.diseases = [];
         this.defaultDisease = {
             "name": "Malaria",
-            "profilePic": "assets/img/speakers/bear.jpg",
+            "profilePic": "assets/img/map.PNG",
             "about": "malaria is a disease.",
         };
         var diseases = [
@@ -306,28 +306,63 @@ var Countries = /** @class */ (function () {
         this.countries = [];
         this.defaultCountry = {
             "name": "America",
-            "profilePic": "assets/img/speakers/bear.jpg",
+            "flag": "assets/img/png250px/us.png",
             "about": "malaria is a disease.",
         };
         var countries = [
             {
-                "name": "Country Name",
-                "flag": "assets/img/mosquito.jpg",
+                "name": "Afghanistan",
+                "flag": "assets/img/png250px/af.png",
                 "price": "$1"
             },
             {
-                "name": "Country Name",
-                "flag": "assets/img/mosquito.jpg",
+                "name": "Albania",
+                "flag": "assets/img/png250px/al.png",
                 "price": "$1"
             },
             {
-                "name": "Country Name",
-                "flag": "assets/img/mosquito.jpg",
+                "name": "Algeria",
+                "flag": "assets/img/png250px/dz.png",
                 "price": "$1"
             },
             {
-                "name": "Country Name",
-                "flag": "assets/img/mosquito.jpg",
+                "name": "Andorra",
+                "flag": "assets/img/png250px/ad.png",
+                "price": "$1"
+            },
+            {
+                "name": "Angola",
+                "flag": "assets/img/png250px/ao.png",
+                "price": "$1"
+            },
+            {
+                "name": "Antigua and Barbuda",
+                "flag": "assets/img/png250px/ag.png",
+                "price": "$1"
+            },
+            {
+                "name": "Argentina",
+                "flag": "assets/img/png250px/ar.png",
+                "price": "$1"
+            },
+            {
+                "name": "Armenia",
+                "flag": "assets/img/png250px/am.png",
+                "price": "$1"
+            },
+            {
+                "name": "Yemen",
+                "flag": "assets/img/png250px/ae.png",
+                "price": "$1"
+            },
+            {
+                "name": "Zambia",
+                "flag": "assets/img/png250px/za.png",
+                "price": "$1"
+            },
+            {
+                "name": "Zimbabwe",
+                "flag": "assets/img/png250px/zw.png",
                 "price": "$1"
             }
         ];

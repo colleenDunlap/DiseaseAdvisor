@@ -8,7 +8,7 @@ export class Countries {
 
   defaultCountry: any = {
     "name": "America",
-    "profilePic": "assets/img/speakers/bear.jpg",
+    "flag": "assets/img/png250px/us.png",
     "about": "malaria is a disease.",
   };
 
@@ -16,23 +16,58 @@ export class Countries {
   constructor() {
     let countries = [
       {
-        "name": "Country Name",
-        "flag": "assets/img/mosquito.jpg",
+        "name": "Afghanistan",
+        "flag": "assets/img/png250px/af.png",
         "price": "$1"
       },
       {
-        "name": "Country Name",
-        "flag": "assets/img/mosquito.jpg",
+        "name": "Albania",
+        "flag": "assets/img/png250px/al.png",
         "price": "$1"
       },
       {
-        "name": "Country Name",
-        "flag": "assets/img/mosquito.jpg",
+        "name": "Algeria",
+        "flag": "assets/img/png250px/dz.png",
         "price": "$1"
       },
       {
-        "name": "Country Name",
-        "flag": "assets/img/mosquito.jpg",
+        "name": "Andorra",
+        "flag": "assets/img/png250px/ad.png",
+        "price": "$1"
+      },
+      {
+        "name": "Angola",
+        "flag": "assets/img/png250px/ao.png",
+        "price": "$1"
+      },
+      {
+        "name": "Antigua and Barbuda",
+        "flag": "assets/img/png250px/ag.png",
+        "price": "$1"
+      },
+      {
+        "name": "Argentina",
+        "flag": "assets/img/png250px/ar.png",
+        "price": "$1"
+      },
+      {
+        "name": "Armenia",
+        "flag": "assets/img/png250px/am.png",
+        "price": "$1"
+      },
+      {
+        "name": "Yemen",
+        "flag": "assets/img/png250px/ae.png",
+        "price": "$1"
+      },
+      {
+        "name": "Zambia",
+        "flag": "assets/img/png250px/za.png",
+        "price": "$1"
+      },
+      {
+        "name": "Zimbabwe",
+        "flag": "assets/img/png250px/zw.png",
         "price": "$1"
       }
     ];

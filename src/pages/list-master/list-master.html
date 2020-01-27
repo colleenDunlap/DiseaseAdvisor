@@ -1,6 +1,7 @@
 <ion-header>
 
   <ion-navbar>
+    <ion-icon name="arrow-round-back" (click)="exitCountry()"></ion-icon>
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
   </ion-navbar>
 
@@ -12,7 +13,10 @@
     <ion-item *ngFor="let disease of currentDiseases">
       <button ion-item (click)="openDisease(disease)">
         <h2>{{disease.name}}</h2>
-        <p>{{disease.about}}</p>
+        <p>{{disease.causes}}</p>
+        <p>{{disease.Preventions}}</p>
+        <p>{{disease.Vaccines}}</p>
+        <p>{{disease.symptoms}}</p>
         <ion-note item-end *ngIf="disease.note">{{disease.note}}</ion-note> <!--We can store outbreak info in the notes-->
       </button>
     </ion-item>

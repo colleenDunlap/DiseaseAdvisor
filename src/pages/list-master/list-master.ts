@@ -3,6 +3,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Disease } from '../../models/disease';
 import { Diseases } from '../../providers';
+import { WelcomePage } from '../welcome/welcome';
 
 @IonicPage()
 @Component({
@@ -43,5 +44,9 @@ export class ListMasterPage {
     this.navCtrl.push('DiseaseDetailPage', {
       disease: disease
     });
+  }
+
+  exitCountry(){
+    this.navCtrl.push(WelcomePage);
   }
 }
