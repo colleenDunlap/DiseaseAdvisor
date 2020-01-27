@@ -1,8 +1,8 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Item } from '../../models/item';
-import { Items } from '../../providers';
+import { MedCenter } from '../../models/medCenter';
+import { MedCenters } from '../../providers';
 
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
@@ -17,13 +17,15 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated"
   templateUrl: 'medical.html'
 })
 export class MedicalPage implements OnInit{
-
-  currentItems: any = [];
-  allMedicalCenters: Item[]; //list of all items to display at the bottom
+  currentMedCenters: any = [];
+  allMedicalCenters: MedCenter[]; 
   private chart: am4maps.MapChart;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items, private zone: NgZone) { 
-    this.allMedicalCenters = this.items.query(); //get all items to add to list
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public medCenters: MedCenters, private zone: NgZone) { 
+    this.allMedicalCenters = this.medCenters.query(); //get all items to add to list
   }
+
+
   ngAfterViewInit() {
     this.zone.runOutsideAngular(() => {
       am4core.useTheme(am4themes_animated);
@@ -146,25 +148,23 @@ function createCustomMarker( image ) {
   /**
    * Perform a service for the proper items.
    */
-  getItems(ev) {
+  getMedCenters(ev) {
     let val = ev.target.value;
     if (!val || !val.trim()) {
-      this.currentItems = [];
+      this.currentMedCenters = [];
       return;
     }
-    this.currentItems = this.items.query({
+    this.currentMedCenters = this.medCenters.query({
       name: val
     });
   }
 
-  /**
-   * Navigate to the detail page for this item.
-   */
-  openItem(item: Item) {
-    this.navCtrl.push('ItemDetailPage', {
-      item: item
-    });
+  
+  openMedCenter(medCenter: MedCenter) {
+    //add code to map to that location based on current location
   }
+
+
   ngOnDestroy() {
     this.zone.runOutsideAngular(() => {
       if (this.chart) {
