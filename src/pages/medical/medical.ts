@@ -19,8 +19,11 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated"
 export class MedicalPage implements OnInit{
 
   currentItems: any = [];
+  allMedicalCenters: Item[]; //list of all items to display at the bottom
   private chart: am4maps.MapChart;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items, private zone: NgZone) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items, private zone: NgZone) { 
+    this.allMedicalCenters = this.items.query(); //get all items to add to list
+  }
   ngAfterViewInit() {
     this.zone.runOutsideAngular(() => {
       am4core.useTheme(am4themes_animated);
