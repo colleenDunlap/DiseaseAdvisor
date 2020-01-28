@@ -2,7 +2,7 @@
   "cordova-plugin-firebase-authentication": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-firebase-authentication"
+      "id": "cordova-plugin-firebase-authentication@^3.0.2"
     },
     "is_top_level": true,
     "variables": {}

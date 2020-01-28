@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
-//import { FirebaseAuthentication } from '@ionic-native/firebase-authentication/ngx';
+import { FirebaseAuthentication } from '@ionic-native/firebase-authentication/ngx';
 import * as firebase from '@firebase/app';
 import { User } from '../../providers';
 import { WelcomePage } from '../';
 
+
 @IonicPage()
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html'
+  templateUrl: 'login.html',
+  providers: [FirebaseAuthentication]
 })
 export class LoginPage {
   // The account fields for the login form.
@@ -26,8 +28,8 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
     public user: User,
     public toastCtrl: ToastController,
-    //public translateService: TranslateService, private firebaseAuthentication: FirebaseAuthentication) {
-      public translateService: TranslateService){
+    public translateService: TranslateService, private firebaseAuthentication: FirebaseAuthentication) {
+    //  public translateService: TranslateService){
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
     })
@@ -62,12 +64,12 @@ export class LoginPage {
       });
   });
   */
- /*
+ 
  this.firebaseAuthentication.signInWithEmailAndPassword(this.account.email, this.account.password)
   .then((res: any) => console.log(res))
   .catch((error: any) => console.error(error));
-  */
-  console.log('latest version')
+  
+  console.log('latest version 5')
    
   }
 }
